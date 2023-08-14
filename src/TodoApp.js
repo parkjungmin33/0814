@@ -84,25 +84,24 @@ class TodoApp extends React.Component {
   render() {
     const { todoInput, todos, currentDate } = this.state;
 
+    const todo = ['일정1', '일정2', '일정3'];
+
     return (
 
       <div className="centered-container">
-        {/* rounded-box */}
         <div className="rounded-box">
           <h2>{currentDate}</h2>
           <p>오늘</p>
          
          <div className="schedule">
           <h2>일정</h2>
-          <p> 일단 이런저런 일정들</p>
+          <ul>
+            {todo.map((item)=> (
+              <Todolist/>
+            ))}
+          </ul>
          </div>
          
-
-          <div className="memo-box">
-            <h2>메모</h2>
-              <p>이런 저런 메모들</p>
-          </div>
-
           {/* 노인 화면은 따로 일정 추가 부분이 필요없어서 일단 주석처리
           <div id="todoContainer">
             <input
@@ -131,6 +130,14 @@ class TodoApp extends React.Component {
       </div>
     );
   }
+}
+
+function Todolist (){
+  return(
+    <li>
+    일정들
+  </li>
+  )
 }
 
 export default TodoApp;

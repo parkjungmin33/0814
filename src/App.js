@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { createBrowserRouter, RouterProvider,Outlet} from 'react-router-dom';
 import SeniorScheduleReminder from './SeniorScheduleReminder';
 import ScheduleReminderPlanner from './ScheduleReminderPlanner';
-import FirstPage from './FirstPage'
-import MainPage from './MainPage'
+import FirstPage from './FirstPage';
+import MainPage from './MainPage';
+import ScheduleList from './ScheduleList';
 
 export default function App() {
   const routes = [
@@ -14,8 +15,7 @@ export default function App() {
         {path: '/child', element: <ScheduleReminderPlanner/>},  
         {path: '/senior', element: <SeniorScheduleReminder/>},
         {path: '/main', element: <MainPage/>}, 
-
-
+        {path: '/schedule', element: <ScheduleList/>},
       ],
     },
   ]
