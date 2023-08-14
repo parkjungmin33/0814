@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     margin: 10px;
-    padding: 35px;
+    padding: 40px;
     background-color: #1F7D79;
   }
 
@@ -23,7 +23,7 @@
   .icon {
     width: 200px; 
     height: 200px; 
-    margin-bottom: 45px;
+    margin-bottom: 65px;
   }
   
   
