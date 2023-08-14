@@ -1,22 +1,22 @@
-import React from 'react';
-import firstPage from './firstPage';
+import React, { useState } from 'react';
+import AlarmItem from './AlarmItem';
+import './App.css';
+import TodoApp from './TodoApp'; 
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-        <Button /> 
+    <div>
+      <ScheduleReminderPlanner/>
+      <SeniorScheduleReminder/>
+      <div className="login">
+    
+    </div>
     </div>
   );
 }
 
-export default App;
 
-/* 알람 시간이랑 일정/메모
-import React, { useState } from 'react';
-import AlarmItem from './AlarmItem';
-import './App.css'; // Import your CSS file for styling
-
-function App() {
+function ScheduleReminderPlanner() {
   const [alarms, setAlarms] = useState([]);
   const [newAlarm, setNewAlarm] = useState({ time: '', name: '', sound: '', memo: '' });
 
@@ -56,22 +56,13 @@ function App() {
   );
 }
 
-export default App;
-*/
+/*
+import './style.css';*/
 
-
-/* 일정을 추가하는 부분
-import React from 'react';
-import './style.css';
-import TodoApp from './TodoApp'; 
-
-function App() {
+function SeniorScheduleReminder() {
   return (
     <div className="App">
       <TodoApp />
     </div>
   );
 }
-
-export default App;
-*/

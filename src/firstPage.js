@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = () => {
+const firstPage = () => {
   return (
     <button>
       로그인
