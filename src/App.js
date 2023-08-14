@@ -1,3 +1,17 @@
+import React from 'react';
+import firstPage from './firstPage';
+
+function App() {
+  return (
+    <div className="App">
+        <Button /> 
+    </div>
+  );
+}
+
+export default App;
+
+/* 알람 시간이랑 일정/메모
 import React, { useState } from 'react';
 import AlarmItem from './AlarmItem';
 import './App.css'; // Import your CSS file for styling
@@ -43,6 +57,8 @@ function App() {
 }
 
 export default App;
+*/
+
 
 /* 일정을 추가하는 부분
 import React from 'react';
