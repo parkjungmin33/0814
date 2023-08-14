@@ -1,18 +1,36 @@
-import React, { useState } from 'react';
-import AlarmItem from './AlarmItem';
+import React from 'react';
+import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom';
+
 import './App.css';
-import TodoApp from './TodoApp'; 
+
 import ScheduleReminderPlanner from './ScheduleReminderPlanner'
 import SeniorScheduleReminder from './SeniorScheduleReminder';
 
 export default function App() {
+  const routes = [
+    {
+      element: <Layout />,
+      children: [
+        {path: '/', element: <SeniorScheduleReminder />},
+        {path: '/child', element: <ScheduleReminderPlanner/>}, 
+      ],
+    },
+  ]
+
+
+  const router = createBrowserRouter(routes);
+
   return (
-    <div>
-      <ScheduleReminderPlanner/>
-      <SeniorScheduleReminder/>
-      <div className="login">
-    
-    </div>
-    </div>
+    <RouterProvider router={router} />
   );
+}
+
+function Layout() {
+	return (
+		<div>
+			<main>
+				<Outlet />
+			</main>
+		</div>
+	);
 }
