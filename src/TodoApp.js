@@ -34,9 +34,6 @@ class TodoApp extends React.Component {
 
   //할 일 항목의 완료 상태
   toggleTodoCompletion = index => {
-    const todos = [...this.state.todos];
-    todos[index].completed = !todos[index].completed;
-    this.setState({ todos }, this.saveToLocalStorage);
   };
 
   //새로운 항목 추가
@@ -77,36 +74,52 @@ class TodoApp extends React.Component {
     }
   };
 
+  handleInputKeyDown = e => {
+    if (e.key === 'Enter') {
+      e.preventDefault(); // 기본 엔터키 동작 방지
+      this.addTodo();
+    }
+  };
+
   render() {
     const { todoInput, todos, currentDate } = this.state;
 
     return (
-      <div>
-        <p>site name</p>
-        <h2>{currentDate}</h2>
-        <h1>오늘</h1>
 
-        <div id="todoContainer">
-          <input
-            type="text"
-            value={todoInput}
-            onChange={e => this.setState({ todoInput: e.target.value })}
-            placeholder="할 일을 입력하세요"
-          />
-          <button onClick={this.addTodo}>추가</button>
-        </div>
-        <ul>
-          {todos.map((todo, index) => (
-            <TodoItem
-              key={index}
-              todo={todo}
-              index={index}
-              toggleTodoCompletion={this.toggleTodoCompletion}
-              editTodo={this.editTodo}
-              deleteTodo={this.deleteTodo}
+      <div className="centered-container">
+        {/* rounded-box */}
+        <div className="rounded-box">
+          <h2>{currentDate}</h2>
+          <p>오늘</p>
+          <h2>일정</h2>
+
+          <div id="todoContainer">
+            <input
+              type="text"
+              value={todoInput}
+              onChange={e => this.setState({ todoInput: e.target.value })}
+              onKeyDown={this.handleInputKeyDown}
+              placeholder="일정을 추가하세요"
             />
-          ))}
-        </ul>
+            <button onClick={this.addTodo}>추가</button>
+          </div>
+          <ul>
+            {todos.map((todo, index) => (
+              <TodoItem
+                key={index}
+                todo={todo}
+                index={index}
+                toggleTodoCompletion={this.toggleTodoCompletion}
+                editTodo={this.editTodo}
+                deleteTodo={this.deleteTodo}
+              />
+            ))}
+          </ul>
+          <div className="memo-box">
+            <h2>메모</h2>
+
+          </div>
+        </div>
       </div>
     );
   }

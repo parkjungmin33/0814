@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 시간 입력 섹션에 둥근 모서리 박스 스타일 적용 */
+.input-section.time-input {
+  background-color: #1F7D79;
   color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px; 
+  flex: 1; 
 }
 
-.App-link {
-  color: #61dafb;
+/* 알람 상세 정보 입력 섹션에 둥근 모서리 박스 스타일 적용 */
+.input-section.details-input {
+  background-color: #F7F4E8;
+  color: black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  flex: 1; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-section {
+  display: flex; 
+  flex-direction: column;
+  flex: 1;
+  margin-bottom: 20px; 
+}
+
+.input-section p {
+  margin-top: -1px;
+  font-size: 13px;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-section input[type="time"],
+.input-section input[type="text"],
+.input-section textarea {
+  width:auto;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.input-section textarea {
+  height: 100px;
+}
+
+.input-section button {
+  background-color: #1F7D79;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.alarms-list {
+  flex: 1;
+}
+
+.alarm-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.alarm-item h2 {
+  margin-top: 0;
+}
+
+.alarm-item button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
