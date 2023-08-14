@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faPlus } from '@fortawesome/free-solid-svg-icons';
-import './ScheduleList';
+import './ScheduleList.css';
 
 const initialTodo = ['일정1', '일정2', '일정3'];
 
@@ -28,8 +28,11 @@ function ScheduleList() {
     return (
         <div className="centered-container">
             <div className="rounded-box">
-                <h2>{currentDate}</h2>
-                <p>오늘</p>
+                <div className='date-circle'>
+                    <span className="date-month">{new Date().toLocaleDateString(undefined, { month: 'long' })}</span>
+                    <span className="date-day">{new Date().toLocaleDateString(undefined, { day: 'numeric' })}</span>
+                    <p>오늘</p>
+                </div>
 
                 <div className="schedule">
                     <h2>
