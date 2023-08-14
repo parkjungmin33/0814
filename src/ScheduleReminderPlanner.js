@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AlarmItem from './AlarmItem';
+/*import './App.css';*/
 
 export default function ScheduleReminderPlanner() {
     const [alarms, setAlarms] = useState([]);

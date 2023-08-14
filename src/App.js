@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom';
 
 import './App.css';
 
+=======
+import React, { useState } from 'react';
+import AlarmItem from './AlarmItem';
 import ScheduleReminderPlanner from './ScheduleReminderPlanner'
 import SeniorScheduleReminder from './SeniorScheduleReminder';
+import TodoApp from './TodoApp'; 
+import FirstPage from './FirstPage';
+import MainPage from './MainPage';
 
 export default function App() {
   const routes = [
@@ -21,7 +28,7 @@ export default function App() {
   const router = createBrowserRouter(routes);
 
   return (
-    <RouterProvider router={router} />
+    <RouterProvider router={router} />  
   );
 }
 

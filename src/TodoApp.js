@@ -91,8 +91,19 @@ class TodoApp extends React.Component {
         <div className="rounded-box">
           <h2>{currentDate}</h2>
           <p>오늘</p>
+         
+         <div className="schedule">
           <h2>일정</h2>
+          <p> 일단 이런저런 일정들</p>
+         </div>
+         
 
+          <div className="memo-box">
+            <h2>메모</h2>
+              <p>이런 저런 메모들</p>
+          </div>
+
+          {/* 노인 화면은 따로 일정 추가 부분이 필요없어서 일단 주석처리
           <div id="todoContainer">
             <input
               type="text"
@@ -102,7 +113,7 @@ class TodoApp extends React.Component {
               placeholder="일정을 추가하세요"
             />
             <button onClick={this.addTodo}>추가</button>
-          </div>
+          </div> */}
           <ul>
             {todos.map((todo, index) => (
               <TodoItem
@@ -115,10 +126,7 @@ class TodoApp extends React.Component {
               />
             ))}
           </ul>
-          <div className="memo-box">
-            <h2>메모</h2>
-
-          </div>
+          
         </div>
       </div>
     );
