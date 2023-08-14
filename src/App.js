@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
-import AlarmItem from './AlarmItem';
-import ScheduleReminderPlanner from './ScheduleReminderPlanner'
+import { createBrowserRouter, RouterProvider,Outlet} from 'react-router-dom';
 import SeniorScheduleReminder from './SeniorScheduleReminder';
-import TodoApp from './TodoApp'; 
-import FirstPage from './FirstPage';
-import MainPage from './MainPage';
+import ScheduleReminderPlanner from './ScheduleReminderPlanner';
+import FirstPage from './FirstPage'
+import MainPage from './MainPage'
 
 export default function App() {
   const routes = [
     {
       element: <Layout />,
       children: [
-        {path: '/', element: <SeniorScheduleReminder />},
-        {path: '/child', element: <ScheduleReminderPlanner/>}, 
+        {path: '/', element: <FirstPage />},
+        {path: '/child', element: <ScheduleReminderPlanner/>},  
+        {path: '/senior', element: <SeniorScheduleReminder/>},
+        {path: '/main', element: <MainPage/>}, 
+
+
       ],
     },
   ]

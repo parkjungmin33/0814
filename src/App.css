@@ -7,6 +7,7 @@
 
 /* 시간 입력 섹션에 둥근 모서리 박스 스타일 적용 */
 .input-section.time-input {
+  display: flex;
   background-color: #1F7D79;
   color: white;
   border-radius: 10px;
@@ -17,6 +18,7 @@
 
 /* 알람 상세 정보 입력 섹션에 둥근 모서리 박스 스타일 적용 */
 .input-section.details-input {
+  display: flex;
   background-color: #F7F4E8;
   color: black;
   border-radius: 10px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AlarmItem from './AlarmItem';
-/*import './App.css';*/
+import './App.css';
 
 export default function ScheduleReminderPlanner() {
     const [alarms, setAlarms] = useState([]);
@@ -31,12 +31,6 @@ export default function ScheduleReminderPlanner() {
             <textarea name="memo" value={newAlarm.memo} onChange={handleAlarmChange} />
             <button onClick={handleAddAlarm}>알람 추가</button>
           </div>
-        </div>
-        
-        <div className="input-section alarms-list">
-          {alarms.map((alarm, index) => (
-            <AlarmItem key={index} alarm={alarm} />
-          ))}
         </div>
       </div>
     );

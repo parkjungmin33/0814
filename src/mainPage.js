@@ -1,5 +1,5 @@
 import React from 'react';
-function main() {
+function MainPage() {
     return (
       <div className="App">
         <button>보호자</button>
@@ -9,4 +9,4 @@ function main() {
     );
   }
   
-  export default main;
+  export default MainPage;

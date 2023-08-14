@@ -1,5 +1,6 @@
 import React from 'react';
 import TodoApp from './TodoApp';
+import './style.css'
 
 export default function SeniorScheduleReminder() {
   return (
