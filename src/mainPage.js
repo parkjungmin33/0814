@@ -1,10 +1,12 @@
 import React from 'react';
+import './MainPage.css';
+
 function MainPage() {
     return (
       <div className="App">
-        <button>보호자</button>
-        <button>노인</button>
-        <button>설정</button>
+        <button className='protector'>보호자</button>
+        <button className='senior'>노인</button>
+        <button className='setting'>설정</button>
       </div>
     );
   }

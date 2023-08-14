@@ -1,34 +1,38 @@
 .f {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: white;
   }
 
   .button-container {
+    flex-direction: column;
     display: flex;
     align-items: center;
     margin: 10px;
+    padding: 35px;
+    background-color: #1F7D79;
   }
 
+  .rounded {
+    border-radius: 10px;
+  }
+ 
+  /*사진*/
   .icon {
-    width: 50px; 
-    height: 50px; 
-    margin-right: 10px;
+    width: 200px; 
+    height: 200px; 
+    margin-bottom: 45px;
   }
   
-  .button-container img {
-    margin-right: 10px;
-  }
   
   .login,
   .signup {
-    margin: 10px;
+    margin: 5px;
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
+    border: 1px solid #FBF8E6;
     border-radius: 100px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
