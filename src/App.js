@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom';
-
-import './App.css';
-
-=======
 import React, { useState } from 'react';
 import AlarmItem from './AlarmItem';
 import ScheduleReminderPlanner from './ScheduleReminderPlanner'
